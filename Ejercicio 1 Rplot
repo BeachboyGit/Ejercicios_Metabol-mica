@@ -1,0 +1,39 @@
+Suma<-2+2
+2^(-4)
+Suma
+2+Suma
+CHO<-535000
+VERO<-1350000
+CHO+VERO
+Total <- CHO+VERO
+#Se hizo la suma de dos cultivos celulares uno de células VERO y otro CHO. 
+X<-35
+Y<-22
+W<-"34"
+Z<-"25"
+X+Y
+#Vectores:Objetos que contiene una secuencia de elementos del mismo tipo
+mi_vector <- c(1,2,3,4,5)
+#Data Frames: Estructura tabular que puede tener diferentes tipos de datos en columnas
+mi_dataframe <- data.frame(a=c(1,2,3),b=c("a","b","c"))
+V4 <- c("M","D","Z")
+V1 <- c(1,2,3)
+V2 <- c(4,5,6)
+V3 <- c(7,8,9)
+DF_V <- data.frame(V4,V1,V2,V3)
+View(DF_V)
+install.packages("readr")
+library("readr")
+library(readr)
+datos_titulacion_2_ <- read_csv("Ejercicio R/datos_titulacion (2).csv")
+View(datos_titulacion_2_)
+#Desde internet:
+titulacion <- read_csv(file="https://raw.githubusercontent.com/ManuelLaraMVZ/titulacion_amino_acidos/main/datos_titulacion%20(2).csv")
+head(titulacion)
+install.packages("ggplot2")
+  library(ggplot2)
+#ggplot(datos,aes(x=Nombre, y=datos))
+grafica <- ggplot(titulacion,aes(x=Volumen,y=pH))+
+  geom_point()+
+  labs(title="Titulación de aminoácido",x="Volumen(uL)", y="pH")
+grafica
